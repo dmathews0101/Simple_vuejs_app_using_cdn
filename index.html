@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/main.css">
+    <title>Simple VueJs app using cdn</title>
+</head>
+
+<body>
+    <h1>Simple VueJs App using cdn</h1>
+    <div id="root">
+        <ul>
+            <li v-for="quote in quotes">
+                <h3 @click="toggleHiddenAuthor">{{ quote.text }}</h3>
+                <ul>
+                    <li>
+                        <h2 v-show="showAuthor">{{ quote.author }}</h2>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
